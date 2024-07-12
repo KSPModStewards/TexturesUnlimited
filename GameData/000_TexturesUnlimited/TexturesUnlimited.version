@@ -1,8 +1,7 @@
 {
 	"NAME":"TexturesUnlimited",
-	"URL":"http://ksp-avc.cybutek.net/version.php?id=532",
-	"DOWNLOAD":"https://github.com/shadowmage45/TexturesUnlimited/releases/tag/1.5.10.25",
-	"CHANGE_LOG_URL":"https://github.com/shadowmage45/TexturesUnlimited/releases/tag/1.5.10.25",
+	"URL":"https://raw.githubusercontent.com/KSPModStewards/TexturesUnlimited/main/GameData/000_TexturesUnlimited/TexturesUnlimited.version",
+	"DOWNLOAD":"https://github.com/KSPModStewards/TexturesUnlimited/releases",
 	"VERSION":
 	{
 		"MAJOR":1,

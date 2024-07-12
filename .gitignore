@@ -1,3 +1,9 @@
+bin/
+obj/
+.vs/
+*.user
+GameData/000_TexturesUnlimited/Plugins/
+
 # Prerequisites
 *.d
 
@@ -57,4 +63,3 @@ TexturesUnlimited/Library
 TexturesUnlimited/Shaders
 TexturesUnlimited/Assets/Shaders*
 TexturesUnlimited/Assets/Build
-TexturesUnlimited/.vs
