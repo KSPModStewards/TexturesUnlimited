@@ -59,12 +59,19 @@ Shader "TU/Metallic"
 		Tags {"RenderType"="Opaque"}
 		ZWrite On
 		ZTest LEqual
-		Blend SrcAlpha OneMinusSrcAlpha
+		//Blend SrcAlpha OneMinusSrcAlpha
+
+		Stencil
+        {
+            Ref 1
+            Comp Always
+            Pass Replace
+        }
 
 		CGPROGRAM
 
 		//directives for 'surface shader' 'surface name = 'TU'' and 'don't discard alpha values'
-		#pragma surface surf TU keepalpha
+		#pragma surface surf TU //keepalpha
 		#pragma target 3.0
 		//#pragma skip_variants POINT POINT_COOKIE DIRECTIONAL_COOKIE //need to find out what variants are -actually- used...
 		//#pragma multi_compile_fwdadd_fullshadows //stalls out Unity Editor while compiling shader....
