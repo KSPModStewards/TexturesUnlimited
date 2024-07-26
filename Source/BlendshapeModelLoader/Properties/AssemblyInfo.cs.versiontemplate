@@ -1,0 +1,7 @@
+using System.Reflection;
+
+[assembly: AssemblyTitle("BlendShapeModelLoader")]
+
+[assembly: AssemblyVersion("@VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_PATCH@.@VERSION_BUILD@")]
+[assembly: AssemblyFileVersion("@VERSION_MAJOR@.@VERSION_MINOR@.@VERSION_PATCH@.@VERSION_BUILD@")]
+[assembly: KSPAssembly("BlendShapeModelLoader", @VERSION_MAJOR@, @VERSION_MINOR@, @VERSION_PATCH@)]
