@@ -11,6 +11,10 @@
 * https://yaclog.readthedocs.io
 * https://keepachangelog.com
 
+## Unreleased
+
+* Merged fixes from upstream dev branch that are necessary for TURD to work
+
 ## 1.6.0.26 - 2024-07-31
 
 * Updated metal shaders for compatibility with deferred rendering
