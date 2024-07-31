@@ -11,9 +11,10 @@
 * https://yaclog.readthedocs.io
 * https://keepachangelog.com
 
-## Unreleased
+## 1.6.1.27 - 2024-07-31
 
 * Merged fixes from upstream dev branch that are necessary for TURD to work
+
 
 ## 1.6.0.26 - 2024-07-31
 
