@@ -3,10 +3,10 @@
 	"URL":"https://raw.githubusercontent.com/KSPModStewards/TexturesUnlimited/main/GameData/000_TexturesUnlimited/TexturesUnlimited.version",
 	"DOWNLOAD":"https://github.com/KSPModStewards/TexturesUnlimited/releases",
 	"VERSION": {
-		"MAJOR": 1,
-		"MINOR": 6,
-		"PATCH": 0,
-		"BUILD": 26
+		"MAJOR": @VERSION_MAJOR@,
+		"MINOR": @VERSION_MINOR@,
+		"PATCH": @VERSION_PATCH@,
+		"BUILD": @VERSION_BUILD@
 	},
 	"KSP_VERSION":
 	{

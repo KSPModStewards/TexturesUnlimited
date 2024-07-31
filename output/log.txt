@@ -1,2 +1,0 @@
-BaseMap creation - running with paths - input/output: C:\git_source\git\TexturesUnlimited\input -> C:\git_source\git\TexturesUnlimited\output
-Application exiting due to completed run.
