@@ -14,6 +14,7 @@
 ## Unreleased
 
 * Updated metal shaders for compatibility with deferred rendering
+* Add support for [Kerbal Changelog](https://forum.kerbalspaceprogram.com/topic/200702-19%E2%80%93112-kerbal-changelog-v142-adopted/)
 
 ## 1.5.10.25 - 2020-03-01
 
