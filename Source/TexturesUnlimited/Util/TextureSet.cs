@@ -241,14 +241,14 @@ namespace KSPShaderTools
 
         private static bool TryParseNameAndOccurrence(string fullName, out string name, out int occurrence)
         {
-            // Check for a comma in the second-to-last position.
+            // Check if the name contains a comma.
             // If so parse everything before as the name and everything following as the occurrence number.
 
             name = default;
             occurrence = default;
-            int commaIndex = Mathf.Max(fullName.Length - 2, 0);
+            int commaIndex = fullName.LastIndexOf(',');
 
-            if (fullName[commaIndex] != ',' || !int.TryParse(fullName.Substring(commaIndex + 1), out occurrence))
+            if (commaIndex < 0 || !int.TryParse(fullName.Substring(commaIndex + 1), out occurrence))
                 return false;
 
             name = fullName.Substring(0, commaIndex);
