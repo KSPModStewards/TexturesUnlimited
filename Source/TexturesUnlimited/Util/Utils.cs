@@ -609,6 +609,43 @@ namespace KSPShaderTools
         }
 
         /// <summary>
+        /// Searches recursively for the child transform that is the given occurrence of a child with the given name. 
+        /// </summary>
+        /// <param name="transform">The transform from which to begin the search.</param>
+        /// <param name="name">The transform name to match with.</param>
+        /// <param name="occurrence">The zero-based occurrence of the given transform name to match with.</param>
+        /// <returns>The child with the given name and name occurrence or null if not found.</returns>
+        public static Transform FindExactChild(this Transform transform, String name, int occurrence)
+        {
+            int count = 0;
+            return FindExactChildRecursion(name, occurrence, ref transform, ref count) ? transform : null;
+        }
+
+        private static bool FindExactChildRecursion(String name, int index, ref Transform transform, ref int count)
+        {
+            if (transform.name == name)
+            {
+                if (count == index)
+                    return true;
+
+                count++;
+            }
+
+            // Is it necessary to store the parent transform? Or does the foreach loop keep the original reference?
+            // Would it be faster to return a Transform and null check each child than to return a bool and juggle variables on the stack?
+            Transform parent = transform; 
+
+            foreach (Transform child in parent)
+            {
+                transform = child; // Can't use a foreach variable as a ref.
+                if (FindExactChildRecursion(name, index, ref transform, ref count))
+                    return true;
+            }
+
+            return false;
+        }
+
+        /// <summary>
         /// Searches entire model heirarchy from the input transform to end of branches for transforms with the input transform name and returns the first match found, or null if none.
         /// </summary>
         /// <param name="transform"></param>
