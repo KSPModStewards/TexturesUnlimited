@@ -621,11 +621,11 @@ namespace KSPShaderTools
             return FindExactChildRecursion(name, occurrence, ref transform, ref count) ? transform : null;
         }
 
-        private static bool FindExactChildRecursion(String name, int index, ref Transform transform, ref int count)
+        private static bool FindExactChildRecursion(String name, int occurrence, ref Transform transform, ref int count)
         {
             if (transform.name == name)
             {
-                if (count == index)
+                if (count == occurrence)
                     return true;
 
                 count++;
@@ -638,7 +638,7 @@ namespace KSPShaderTools
             foreach (Transform child in parent)
             {
                 transform = child; // Can't use a foreach variable as a ref.
-                if (FindExactChildRecursion(name, index, ref transform, ref count))
+                if (FindExactChildRecursion(name, occurrence, ref transform, ref count))
                     return true;
             }
 
