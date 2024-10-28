@@ -173,6 +173,8 @@ namespace KSPShaderTools
                 int len = rends.Length;
                 for (int i = 0; i < len; i++)
                 {
+                    // For completeness, "name,occurrence" could be supported here as well, but so far there is no use case.
+
                     if (!excludeMeshes.Contains(rends[i].name))
                     {
                         Log.extra("Adding mesh due to blacklist: " + rends[i].transform);
@@ -204,6 +206,17 @@ namespace KSPShaderTools
                 Renderer r;
                 for (int i = 0; i < len; i++)
                 {
+                    // Check if the mesh name is in the format of "name,occurrence".
+                    if (TryParseNameAndOccurrence(meshes[i], out string name, out int occurrence))
+                    {
+                        // Find the zero-based occurrence of the child with the given name.
+                        tr = root.FindExactChild(name, occurrence);
+                        if (tr != null && tr.GetComponent<Renderer>() != null)
+                            transforms.AddUnique(tr);
+
+                        continue;
+                    }
+
                     trs = root.FindChildren(meshes[i]);
                     int len2 = trs.Length;
                     for (int k = 0; k < len2; k++)
@@ -224,6 +237,22 @@ namespace KSPShaderTools
                 }
             }
             return transforms.ToArray();
+        }
+
+        private static bool TryParseNameAndOccurrence(string fullName, out string name, out int occurrence)
+        {
+            // Check if the name contains a comma.
+            // If so parse everything before as the name and everything following as the occurrence number.
+
+            name = default;
+            occurrence = default;
+            int commaIndex = fullName.LastIndexOf(',');
+
+            if (commaIndex < 0 || !int.TryParse(fullName.Substring(commaIndex + 1), out occurrence))
+                return false;
+
+            name = fullName.Substring(0, commaIndex);
+            return true;
         }
 
         /// <summary>
