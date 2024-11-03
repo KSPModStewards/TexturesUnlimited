@@ -11,9 +11,10 @@
 * https://yaclog.readthedocs.io
 * https://keepachangelog.com
 
-## Unreleased
+## 1.6.2.28 - 2024-11-03
 
 * Adds support for selecting a specific occurrence of a given transform name (thanks @Halbann)
+
 
 ## 1.6.1.27 - 2024-07-31
 
