@@ -783,6 +783,7 @@ namespace KSPShaderTools
         public Color color;
         public float specular;
         public float metallic;
+        public float detail;
 
         public RecoloringDataPreset(ConfigNode node)
         {
@@ -791,6 +792,7 @@ namespace KSPShaderTools
             color = node.GetColor("color");
             specular = node.GetColorChannelValue("specular");
             metallic = node.GetColorChannelValue("metallic");
+            detail = node.GetColorChannelValue("detail");
         }
 
         public RecoloringData getRecoloringData()
