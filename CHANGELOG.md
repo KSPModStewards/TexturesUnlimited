@@ -11,6 +11,10 @@
 * https://yaclog.readthedocs.io
 * https://keepachangelog.com
 
+## Unreleased
+
+* The `detail` value can now be saved to presets (thanks @svm420)
+
 ## 1.6.2.28 - 2024-11-03
 
 * Adds support for selecting a specific occurrence of a given transform name (thanks @Halbann)
