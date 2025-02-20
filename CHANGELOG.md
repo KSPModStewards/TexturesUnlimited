@@ -11,9 +11,10 @@
 * https://yaclog.readthedocs.io
 * https://keepachangelog.com
 
-## Unreleased
+## 1.6.3.29 - 2025-02-20
 
 * The `detail` value can now be saved to presets (thanks @svm420)
+
 
 ## 1.6.2.28 - 2024-11-03
 
