@@ -488,6 +488,7 @@ namespace KSPShaderTools
             string value = node.GetStringValue(name).Trim();
             float floatValue = safeParseFloat(value);
             if (value.Contains(".")) { return floatValue; }
+            if (name == "detail") { return floatValue / 100; }
             return floatValue / 255f;
         }
 
