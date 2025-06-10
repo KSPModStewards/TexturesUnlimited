@@ -486,6 +486,13 @@ namespace KSPShaderTools
         public static float GetColorChannelValue(this ConfigNode node, string name)
         {
             string value = node.GetStringValue(name).Trim();
+
+            // Detail was not included in presets originally, so on old presets GetStringValue will return "", which will default to 0.
+            // Default to 1 instead if trying to access detail, which results in a default detail of 100, as before.
+
+            if (value == "" && name == "detail")
+                return 1f;
+
             float floatValue = safeParseFloat(value);
             if (value.Contains(".")) { return floatValue; }
             if (name == "detail") { return floatValue / 100; }
