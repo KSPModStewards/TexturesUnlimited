@@ -11,9 +11,10 @@
 * https://yaclog.readthedocs.io
 * https://keepachangelog.com
 
-## Unreleased
+## 1.6.4.30 - 2025-07-14
 
 * Fix an issue with the `detail` value in presets (thanks @Halbann)
+
 
 ## 1.6.3.29 - 2025-02-20
 
