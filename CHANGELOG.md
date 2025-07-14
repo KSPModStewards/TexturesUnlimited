@@ -11,6 +11,10 @@
 * https://yaclog.readthedocs.io
 * https://keepachangelog.com
 
+## Unreleased
+
+* Fix an issue with the `detail` value in presets (thanks @Halban)
+
 ## 1.6.3.29 - 2025-02-20
 
 * The `detail` value can now be saved to presets (thanks @svm420)
