@@ -13,7 +13,7 @@
 
 ## Unreleased
 
-* Fix an issue with the `detail` value in presets (thanks @Halban)
+* Fix an issue with the `detail` value in presets (thanks @Halbann)
 
 ## 1.6.3.29 - 2025-02-20
 
