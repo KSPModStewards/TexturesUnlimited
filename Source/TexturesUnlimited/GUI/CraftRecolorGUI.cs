@@ -453,7 +453,7 @@ namespace KSPShaderTools
                     bStr = (editingColor.color.b * 255f).ToString("F0");
                     aStr = (editingColor.specular * 255f).ToString("F0");
                     mStr = (editingColor.metallic * 255f).ToString("F0");
-                    //dStr = (editingColor.detail * 100f).ToString("F0");//leave detail mult as pre-specified value (user/config); it does not pull from preset colors at all
+                    dStr = (editingColor.detail * 100f).ToString("F0");
                     update = true;
                 }
                 GUI.color = old;
